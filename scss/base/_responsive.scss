@@ -1,0 +1,42 @@
+@use "../abstracts/colors" as *;
+
+@media only screen and (max-width:992px) {
+	.navbar {
+		.navbar-collapse {
+			.navbar-nav {
+				.nav-item {
+					.nav-link {
+						&::before {
+							width:100%;
+							left:0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width:1199px) {
+	.popular-show-card { background-position:125% 0%!important  }
+}
+@media only screen and (max-width:991px) {
+	.popular-show-card {
+		background-position:-350% 0%!important;
+		background-size:cover!important;
+	}
+}
+@media only screen and (max-width:768px) {
+	.popular-show-card {
+		background:linear-gradient(90deg, $dark 0%, rgba($dark, .9) 30%, rgba($dark, .2) 40%), url(../../img/featured-movie-bg.jpg);
+		background-position:24vw 0%!important;
+		background-size:cover!important;
+		&::before { content:'' }
+	}
+}
+@media only screen and (max-width:620px) {
+	.popular-show-card {
+		background-position:15vw 0%!important;
+		background-size:cover!important;
+		&::before { content:'' }
+	}
+}

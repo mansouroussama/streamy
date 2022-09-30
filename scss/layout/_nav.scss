@@ -1,0 +1,29 @@
+.navbar {
+	.navbar-nav {
+		.nav-item {
+			.nav-link {
+				position:relative;
+				font-weight:600;
+
+				&::before {
+					content:'';
+					width:80%;
+					height:2px;
+					position:absolute;
+					bottom:-3px;
+					left:10%;
+					background-color:transparent;
+					border-radius:3px;
+					transition:background .3s ease-out;
+				}
+				&.active::before, &:hover::before { background-color:$warning }
+			}
+		}
+	}
+	.site-logo {
+		height:1.5rem;
+	}
+	.nav-user-logo {
+		width:2rem;
+	}
+}

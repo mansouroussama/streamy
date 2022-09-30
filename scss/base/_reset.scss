@@ -1,0 +1,7 @@
+// remove default bootstrap glow on focus
+.btn:focus,
+.btn:active,
+.btn:focus-visible {
+  outline:none;
+  box-shadow:none;
+}

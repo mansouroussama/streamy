@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.min.css">
+	<title>Browse the latest movies and shows on Streamy</title>
+	<script defer src="https://kit.fontawesome.com/8bf1141b26.js" crossorigin="anonymous"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!--<script defer src="js/main.js"></script>-->
+	<script defer src="js/browse.js"></script>
+</head>
+<body class="browse-shows text-white">
+	<nav class="navbar navbar-expand-lg navbar-dark p-0 pt-4 pb-0 pb-lg-4">
+		<div class="container-xxl px-4">
+			<a class="navbar-brand m-0 me-lg-5 p-0 order-1" href="index.html">
+				<img class="site-logo" src="img/navbar-logo.png" alt="streamy">
+			</a>
+			<button class="navbar-toggler order-3 ms-3 ms-lg-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse order-lg-2 order-4 mt-lg-0 mt-3" id="navbarSupportedContent">
+				<ul class="navbar-nav gap-3">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link d-lg-block d-inline-block">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="javascript:void(0)" class="nav-link d-lg-block d-inline-block">Movies</a>
+					</li>
+					<li class="nav-item">
+						<a href="show-page.html" class="nav-link d-lg-block d-inline-block">Shows</a>
+					</li>
+					<li class="nav-item">
+						<a href="javascript:void(0)" class="nav-link d-lg-block d-inline-block">My Watchlist</a>
+					</li>
+					<li class="nav-item">
+						<a href="browse-shows-page.html" class="nav-link d-lg-block d-inline-block active">Browse</a>
+					</li>
+				</ul>
+			</div>
+			<ul class="nav ms-auto align-items-center order-lg-3 order-2">
+				<li class="nav-item">
+					<a class="nav-link text-white" href="javascript:void(0)">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="javascript:void(0)">
+						<i class="fa-solid fa-bell"></i>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="javascript:void(0)">
+						<img class="nav-user-logo" src="img/user-logo.png" alt="user">
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<section class="search pt-4">
+		<div class="container-md px-4">
+			<div class="row gx-4">
+				<div class="input-group">
+					<div class="col col-lg-8 d-flex offset-lg-2">
+						<input type="text" name="search" class="search-media form-control border-0 bg-secondary text-gray-1 ps-4 py-4" placeholder="Search for any movie or show..." maxlength="30" autocomplete="off">
+						<button class="search-media-clear btn btn-secondary bg-secondary text-gray-3 p-4 shadow-none" type="button"><i class="fa-solid fa-circle-xmark fs-5 text-gray-3"></i></button>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</section>
+	<section class="shows-group pt-5" data-media-group-type="tv" data-media-group-name="shows1">
+		<div class="container-md px-4">
+			<div class="d-flex mb-4 flex-column flex-sm-row align-items-start align-items-sm-center">
+				<h2 class="h5 m-0 pb-1 pt-3 d-flex text-uppercase fw-bolder section-view-label">trending now</h2>
+				<div class="input-group filter-categories mt-3 mt-sm-0 ms-sm-auto w-auto">
+					<button type="button" class="filter-category btn px-3 py-2 shadow-none text-uppercase fs-6 fw-bold bg-warning text-black" data-media-type="all"><i class="fa-solid fa-bars me-1"></i> all</button>
+					<button type="button" class="filter-category btn px-3 py-2 shadow-none text-uppercase fs-6 fw-bold bg-secondary text-gray-3" data-media-type="movie"><i class="fa-solid fa-film me-1"></i> movies</button>
+					<button type="button" class="filter-category btn px-3 py-2 shadow-none text-uppercase fs-6 fw-bold bg-secondary text-gray-3" data-media-type="tv"><i class="fa-solid fa-tv me-1"></i> tv</button>
+				</div>
+			</div>
+			<div class="row gx-4 trending-container">
+			</div>
+		</div>
+	</section>
+	</section>
+	<footer class="footer text-white py-5 mt-3">
+		<div class="container-md px-4">
+			<div class="row mx-0">
+				<div class="col-md-5 col-lg-4 px-0">
+					<a class="d-block mb-4" href="index.html">
+						<img class="site-logo" src="img/navbar-logo.png" alt="streamy">
+					</a>
+					<p class="text-gray-1 lh-base mb-3">
+						Streamy is a subscription-based service for streaming movies and tv shows with different genres ranging from Drama, thriller, comedy, documentaries and much more.
+					</p>
+					<p class="footer-copyright text-gray-3">&copy; 2022 Streamy, Inc. All rights reserved.</p>
+				</div>
+				<div class="col-xl-2 col-md-3 col-6 offset-xl-4 offset-lg-2 offset-md-1 mt-md-4 mt-2 px-0">
+					<nav class="nav flex-column text-gray-3">
+						<a href="javascript:void(0)" class="nav-link d-inline text-reset lh-lg p-0">About Streamy</a>
+						<a href="javascript:void(0)" class="nav-link d-inline text-reset lh-lg p-0">Contact us</a>
+						<a href="javascript:void(0)" class="nav-link d-inline text-reset lh-lg p-0">Investors</a>
+						<a href="javascript:void(0)" class="nav-link d-inline text-reset lh-lg p-0">Jobs</a>
+					</nav>
+				</div>
+				<div class="col-xl-2 col-md-3 col-6 mt-md-4 col-6 mt-2 px-0">
+					<nav class="nav flex-column text-gray-3">
+						<a href="javascript:void(0)" class="nav-link d-inline text-reset lh-lg p-0">Terms of Service</a>
+						<a href="javascript:void(0)" class="nav-link d-inline text-reset lh-lg p-0">Privacy Policy</a>
+						<a href="javascript:void(0)" class="nav-link d-inline text-reset lh-lg p-0">Cookies Policy</a>
+						<a href="javascript:void(0)" class="nav-link d-inline text-reset lh-lg p-0">Help Center</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

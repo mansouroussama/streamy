@@ -1,0 +1,21 @@
+@use "../abstracts/colors" as *; 
+
+.popular-show-card {
+	min-height:400px;
+	background:linear-gradient(90deg, $dark 0%, $dark 50%, rgba($dark, .2) 60%), url(../img/featured-movie-bg.jpg);
+	background-size:contain;
+	background-repeat:no-repeat;
+	background-position:100% 0%;
+	position:relative;
+	& > * { z-index:2 }
+
+	&::before {
+		width:30%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		background-color:$dark;
+		z-index:1
+	}
+}

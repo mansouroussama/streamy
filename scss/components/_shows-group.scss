@@ -1,0 +1,25 @@
+.show-card {
+	.media-info {
+		padding-inline:2rem;
+		height:100%;
+		cursor:default;
+		
+		.media-description,
+		.media-genre,
+		.media-rating {
+			font-size:14px;
+			line-height:1.7;
+		}
+		.media-watch {
+			font-size:15px;
+			font-weight:600
+		}
+		.media-description {
+		display: -webkit-box;
+		line-clamp: 6;
+		-webkit-line-clamp: 6;
+		-webkit-box-orient: vertical;  
+		overflow: hidden; 
+		}
+	}
+}

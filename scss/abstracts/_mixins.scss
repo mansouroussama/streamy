@@ -1,0 +1,61 @@
+@use '../abstracts/colors' as *;
+
+@mixin animationOnHover {
+	.media-container {
+		position:relative;
+
+		&::after {
+			content:'';
+			display:block;
+			position:absolute;
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background-color:rgba($dark, 0);
+			transition:background .3s ease-out;
+			z-index:2;
+		}
+		.media-img-container {
+			overflow:hidden;
+			z-index:1;
+			img {
+				transition:transform .3s ease-out;
+				object-fit:cover;
+				transform:scale(1) rotate(0);
+			}
+		}
+		
+		.media-info {
+			opacity:0;
+			width:100%;
+			background:transparent;
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:3;
+			transition:opacity .3s ease-out;
+			overflow-y:scroll;
+			
+			&::-webkit-scrollbar {
+				width:0;
+				height:0;
+			};
+			
+		}
+		&:hover, &.active {
+			&::after { background-color:rgba($dark, .85)	}
+			.media-img-container img {
+				transform:scale(1.07) rotate(1deg);
+			}
+			.media-info {
+				transition:opacity .3s ease-out .1s;
+				opacity:1;
+			}
+		}
+
+	}
+}
+@mixin continueWatching {
+	
+}

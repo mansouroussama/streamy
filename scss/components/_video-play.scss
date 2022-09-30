@@ -1,0 +1,39 @@
+@use "../abstracts/colors" as *; 
+
+// @include animationOnHover;
+.video-play {
+	position:relative;
+	.wrapper { overflow:hidden!important } 
+
+	.video-play-img, .video-play-icon  { transition:scale .3s ease-out, rotate .3s ease-out, filter .3s ease-in}
+	.video-play-icon {
+		background-color:$dark;
+		border-radius:50%;
+		position:absolute;
+		text-shadow:3px 0px 0px $warning;
+	}
+	&.show-trailer {
+		.video-play-icon {
+			font-size:3.6rem;
+			top:calc(50% - 28px);
+			left:calc(50% - 28px);
+		}
+	}
+	&.show-episode-play {
+		.video-play-icon {
+			font-size:5.2rem;
+			top:calc(50% - 42px);
+			left:calc(50% - 42px);
+		}
+	}
+	&:hover {
+		.video-play-img {
+			scale:1.05;
+			rotate:1deg;
+			filter:brightness(50%);
+		}
+		.video-play-icon {
+			scale:1.15
+		}
+	}
+}

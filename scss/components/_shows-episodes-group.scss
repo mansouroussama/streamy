@@ -1,0 +1,20 @@
+@use '../abstracts/mixins' as *;
+@use "../abstracts/colors" as *; 
+
+.show-card {
+	@include animationOnHover;
+}
+
+.show-episodes-group-episode {
+	& > a {
+		transition:background .3s ease-out, box-shadow .1s ease-out;
+	
+		&:hover, &.active {
+			background-color:$secondary!important;
+			box-shadow:inset 5px 0px 0px 0px $warning;
+		}
+		.episode-img {
+			max-width:180px
+		}
+	}
+}

@@ -1,0 +1,56 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "../scss/abstracts/fonts";
+@import "../scss/abstracts/colors";
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
+ 
+$custom-theme-colors:(
+	'gray-1': $gray-1,
+	'gray-2': $gray-2,
+	'gray-3': $gray-3
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $custom-theme-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+// Bootstrap source files
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/forms";
+
+@import "../node_modules/bootstrap/scss/buttons";
+
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// Custom styles
+@import 'base';
+@import 'layout/nav';
+@import 'layout/header';
+@import 'components';
+@import 'pages';
+@import 'layout/footer';  
