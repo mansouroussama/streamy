@@ -3,7 +3,7 @@ const moviesNshows = {
 	movies1:['inception', 'joker', 'the+fault+in+our+stars', 'interstellar'],
 	movies2:['the+wolf+of+wall+street', 'prisoners', 'gone+girl', 'get+out'],
 	shows1:['ozark', 'mr+robot', 'chernobyl', 'breaking+bad'],
-	shows2:[ 'money+heist', 'narcos','unbelievable', 'you']
+	shows2:[ 'la+casa+de+papel', 'narcos','unbelievable', 'you']
 }
 const getMediaGenres = async function(mediaType) {
 	try {
