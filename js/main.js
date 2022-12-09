@@ -34,23 +34,6 @@ const getMediaHtml = async function(mediaType, mediaGenres, mediaNameQuery) {
 		const mediaData = mediaDataRes.results[0];
 		console.log(mediaData);
 		
-		// switch (mediaType) {
-		// 	case 'movie':
-		// 		mediaName = mediaData.title;
-		// 		break;
-		// 	case 'tv':
-		// 		mediaName = mediaData.name;
-		// 		break;
-		// }
-		
-		// switch (mediaType) {
-		// 	case 'movie':
-		// 		mediaReleaseDate = mediaData.release_date.slice(0,4);
-		// 		break;
-		// 	case 'tv':
-		// 		mediaReleaseDate = mediaData.first_air_date.slice(0,4);
-		// 		break;
-		// }
 		let mediaName, mediaReleaseDate;
 		if (mediaType == 'movie') {
 			mediaName = mediaData.title;
@@ -61,8 +44,6 @@ const getMediaHtml = async function(mediaType, mediaGenres, mediaNameQuery) {
 			mediaReleaseDate = mediaData.first_air_date.slice(0,4);
 		}
 
-		// const mediaName = (mediaType == 'movie') ? mediaData.title : mediaData.name;
-		// const mediaReleaseDate = (mediaType == 'movie') ? mediaData.release_date.slice(0,4) : mediaData.first_air_date.slice(0,4);
 		const mediaDescription = mediaData.overview;
 		const mediaRating = `${mediaData.vote_average.toFixed(1)}/10`;
 		const mediaGenresIDs = mediaData.genre_ids;
@@ -149,12 +130,3 @@ const getMediaHtml = async function(mediaType, mediaGenres, mediaNameQuery) {
 	console.log(`time duration is: ${t1 - t0} milliseconds.`);
 })()
 
-// // await promise all, console log array vs await res
-// // remove all html in index and change innerhtml to append
-// fix font size in small width, change font-size or change to only one column
-// // fix continue watching & trailer
-// in other pages, create another js file and create the fetchData module and import it and use the function depending on the corresponding movies/shows array
-// seperate css file for each html page
-// // browse page redesign & show popular movies and tv shows (other things maybe, see api docs) and make input button that responds to kepup event that makes a request
-
-//--------------------------
